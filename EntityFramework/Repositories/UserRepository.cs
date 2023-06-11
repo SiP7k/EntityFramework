@@ -49,5 +49,13 @@ namespace EntityFramework.Repositories
                 Console.WriteLine("Имя пользователя успешно обновлено!");
             }
         }
+        public bool DoesUserHaveBook(User user, Book book)
+        {
+            return user.Books.Contains(book);
+        }
+        public int CountUserBooks(User user)
+        {
+            return user.Books.Count();
+        }
     }
 }
